@@ -726,7 +726,7 @@ const PROJECTS = [
       "Carnell Pope",
       "Ibrahim Sambo",
       "Joel Gooden",
-      "Brandon Mayo"
+      "Brennan Mayo"
     ],
     "grade": "10",
     "title": "Minutes Matter: Analyzing How Attendance and Classroom Interruptions Affect Student Achievement",
