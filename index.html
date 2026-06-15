@@ -11,24 +11,29 @@
     <nav class="top-nav">
       <a href="#schedule">Schedule</a>
       <a href="#map">WayFinding Map</a>
+      <a href="#tables">Tables</a>
       <a href="#projects">Projects</a>
     </nav>
+
     <div class="hero-grid">
       <div>
         <p class="eyebrow">Newark School of Data Science and Information Technology</p>
         <h1>NSDSIT Science Fair 2026</h1>
         <p class="tagline">Explore. Innovate. Impact.</p>
+
         <div class="event-details">
           <span>📅 Wednesday, June 17, 2026</span>
           <span>🕘 9:00 AM – 2:30 PM</span>
           <span>📍 NSDSIT Campus, Auditorium & Exhibition Halls</span>
         </div>
+
         <div class="hero-actions">
-          <a href="#map" class="button">Open WayFinding Map</a>
-          <a href="#projects" class="button secondary">Browse Project Directory</a>
+          <a href="#map" class="button">Open Interactive Map</a>
+          <a href="#projects" class="button secondary">Browse Projects</a>
         </div>
       </div>
-      <img class="poster" src="NSDSIT_Science_Fair_2026.png" alt="NSDSIT Science Fair 2026 poster" />
+
+      <img class="logo" src="nsdsit-logo.png" alt="NSDSIT school logo" />
     </div>
   </header>
 
@@ -80,37 +85,21 @@
       <div class="section-heading centered">
         <p class="eyebrow">Interactive Booth Directory</p>
         <h2>NSDSIT Science Fair 2026 WayFinding Map</h2>
-        <p class="note">Click any booth square to jump directly to that project’s information.</p>
+        <p class="note">Click any table on the map to jump to that table's project list.</p>
       </div>
 
-      <div class="map-layout">
-        <aside class="map-sidebar">
-          <div class="subject-summary">
-            <h3>Projects Grouped by Subject</h3>
-            <div id="subjectSummary"></div>
-          </div>
-          <div class="map-help">
-            <h3>How to Use This Map</h3>
-            <ol>
-              <li>Find the project number on the map.</li>
-              <li>Click the booth square.</li>
-              <li>Read the project details below.</li>
-            </ol>
-          </div>
-        </aside>
-
-        <div class="booth-map-wrap">
-          <div class="map-banner">15 Tables • 3 Rows • 5 Tables Per Row • 4 Booths Per Table</div>
-          <div id="boothMap" class="booth-map"></div>
-          <div class="legend">
-            <strong>Booth layout:</strong>
-            <span>Top Left</span>
-            <span>Top Right</span>
-            <span>Bottom Left</span>
-            <span>Bottom Right</span>
-          </div>
-        </div>
+      <div class="map-frame">
+        <img src="wayfinding-map.png" alt="NSDSIT Science Fair 2026 WayFinding Map" class="map-image" />
+        <div id="mapOverlays" class="map-overlays"></div>
       </div>
+    </section>
+
+    <section id="tables" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Table Directory</p>
+        <h2>Projects by Table</h2>
+      </div>
+      <div id="tableDirectory" class="table-directory"></div>
     </section>
 
     <section id="projects" class="section project-section">
@@ -121,7 +110,7 @@
       </div>
 
       <div class="controls">
-        <label>Search<input id="searchInput" type="search" placeholder="Search by project title, student, subject, question..." /></label>
+        <label>Search<input id="searchInput" type="search" placeholder="Search by project title, student, subject, project number, or question..." /></label>
         <label>Grade<select id="gradeFilter"><option value="">All Grades</option></select></label>
         <label>Subject / Club<select id="subjectFilter"><option value="">All Subjects / Clubs</option></select></label>
       </div>
@@ -129,7 +118,7 @@
       <div class="stats">
         <div><strong id="projectCount">0</strong><span>Projects Shown</span></div>
         <div><strong id="totalCount">0</strong><span>Total Projects</span></div>
-        <div><strong>60</strong><span>Booth Spaces</span></div>
+        <div><strong>15</strong><span>Tables</span></div>
       </div>
 
       <div id="projectGrid" class="project-grid"></div>
